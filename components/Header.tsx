@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Home, ChevronDown } from 'lucide-react';
+import { Menu, X, Sun, Moon, Home, ChevronDown, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { COMPANY_NAME, NAV_ITEMS } from '../constants';
 
@@ -90,6 +90,13 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
              >
                 {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
              </button>
+             <Link
+               to="/contact"
+               className="inline-flex items-center gap-1.5 whitespace-nowrap px-4 py-2 rounded-full text-sm font-black text-white bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all duration-200 shadow-sm shadow-blue-600/30"
+               aria-label="Get a quote for your project"
+             >
+               Get a Quote <ArrowRight size={14} aria-hidden="true" />
+             </Link>
           </div>
         </nav>
 

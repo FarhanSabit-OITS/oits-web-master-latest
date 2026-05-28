@@ -168,3 +168,64 @@ We deliver powerful digital engineering across these key service pillars:
     - APAC Operations: `apac@oitsdhaka.com`
   - **Locations**: `Europe, APAC` (development hub in Dhaka, Bangladesh)
   - **Copyright Info**: `Copyright © 2025 OITS DHAKA. All Rights Reserved.`
+
+---
+
+## 11. Information & Legal Compliance Pages (Retrieved via Sitemap Index)
+
+### A. Ethics & Compliance
+- **Url**: `https://oitsdhaka.com/ethics-compliance/`
+- **Last Modified**: `2025-06-09T14:21:35+00:00`
+- **Main Heading**: `Ethics & Compliance`
+- **Core Principles**:
+  - **Commitment**: OITS is committed to upholding the highest standards of human rights, labour ethics, and professional conduct. Zero-tolerance policy for all forms of slavery or coercive labour.
+  - **Due Diligence**: Regular risk assessments of supply chains and internal operations, periodic audits, and enforcement of a supplier code of conduct.
+  - **Accountability**: Whistleblowing policies in place; HR and compliance teams trained to respond to labour-related risks.
+  - **Contact**: `info@oitsdhaka.com`
+
+### B. Privacy Policy
+- **Url**: `https://oitsdhaka.com/privacy-policy/`
+- **Last Modified**: `2025-05-14T11:11:23+00:00`
+- **Effective Date**: `12th May 2025`
+- **Governing Jurisdiction**: United Kingdom (governed by the UK Data Protection Act and GDPR principles).
+- **Collected Data**: Name, job title, company, contact details (email, phone), IP address, browser/device info, demographic info, website usage behaviour.
+- **Data Sharing & Third Parties**: Trusted third-party platforms (e.g. JotForm) and analytics services.
+- **Cookies & Trackers Used**:
+  - Google Analytics (visitor behaviour)
+  - Facebook Pixel (advertising effectiveness)
+  - LinkedIn Insight Tag (ad conversion tracking)
+  - Hotjar (anonymous user behaviour mapping)
+  - Leadfeeder (B2B analytics and site tracking)
+- **Contact/Data Protection Email**: `privacy@oits.com`
+
+### C. Terms & Conditions
+- **Url**: `https://oitsdhaka.com/terms-and-conditions/`
+- **Last Modified**: `2025-05-14T10:46:09+00:00`
+- **Effective Date**: `12 May 2025`
+- **Governing Law & Jurisdiction**: United Kingdom.
+- **Key Policies**:
+  - **Acceptable Use**: No selling, renting, licensing, distributing, scraping, hacking, reverse-engineering, or tampering with site code.
+  - **Intellectual Property**: All rights in text, images, graphics, and code are owned by OITS or its providers.
+  - **Liability**: Provided "as is" and "as available". Disclaimer of warranties; limitation of liability for direct or indirect losses or damages.
+- **Contact Email**: `info@oits.global`
+
+### D. Accessibility Statement
+- **Url**: `https://oitsdhaka.com/accessibility-statement/`
+- **Last Modified**: `2025-05-14T11:16:15+00:00`
+- **Standard Reference**: Aligned with the Web Content Accessibility Guidelines (WCAG) 2.1.
+- **Action Plan**: Commitment to continually improve accessibility and resolve accessibility barriers.
+- **Contact Email**: `accessibility@oits.com`
+
+### E. Cookie Policy (EU)
+- **Url**: `https://oitsdhaka.com/cookie-policy-eu/`
+- **Last Modified**: `2025-05-13T09:48:56+00:00`
+- **Applies to**: Citizens and legal permanent residents of the European Economic Area (EEA) and Switzerland.
+- **Cookie Types**:
+  - Technical / Functional cookies (placed without consent; stores preferences, logged-in status).
+  - Statistics cookies (requires permission; tracks user actions via Google Analytics and Elementor).
+  - Marketing / Tracking cookies (creates user profiles to display advertising or track users across sites).
+- **Third-Party Services Placing Cookies**: Tawk (chat), WordPress, Elementor, Google Fonts, LiveChat, Facebook, Twitter, LinkedIn.
+
+### F. Technology We Used
+- **Url**: `https://oitsdhaka.com/technology-we-used/`
+- **Purpose**: Page containing list of technologies, frameworks, and tools used by OITS Dhaka in their client projects (e.g., Nuxt.js, Node.js, Next.js, MetaMask, Laravel, Kubernetes, Kotlin, JavaScript, Java, Infura, Google BigQuery, Go, Flutter, Flask, Firebase, Figma, Ethereum, Elastic, Docker, Django, Chakra UI, Bootstrap, Beego, AWS, Angular, Google Cloud, Express.js, Apache Superset, TensorFlow, SAP, Oracle).
