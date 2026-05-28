@@ -19,7 +19,7 @@ import {
   Globe,
   Users,
 } from "lucide-react";
-import { COMPANY_NAME, NAV_ITEMS, SERVICES, ADDRESS } from "../constants";
+import { COMPANY_NAME, NAV_ITEMS, SERVICES, ADDRESS, CONTACT_EMAIL, PHONE } from "../constants";
 
 interface FooterProps {
   theme: "light" | "dark";
@@ -291,9 +291,9 @@ export const Footer: React.FC<FooterProps> = ({ theme, toggleTheme }) => {
             {/* Contact Email */}
             <div className="space-y-1">
               <a
-                href="mailto:contact@oitsdhaka.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="inline-flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded-lg p-1 -ml-1"
-                aria-label="Send an email to contact@oitsdhaka.com"
+                aria-label={`Send an email to ${CONTACT_EMAIL}`}
               >
                 <div className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 hover:border-blue-500/30 dark:hover:border-blue-500/30 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/20 dark:hover:bg-slate-850/30 transition-all duration-300 flex items-center justify-center shrink-0 group-hover:bg-blue-50 dark:group-hover:bg-slate-900/40">
                   <Mail
@@ -303,7 +303,7 @@ export const Footer: React.FC<FooterProps> = ({ theme, toggleTheme }) => {
                   />
                 </div>
                 <span className="font-semibold text-base leading-relaxed max-w-xs block text-left">
-                  contact@oitsdhaka.com
+                  {CONTACT_EMAIL}
                 </span>
               </a>
             </div>
@@ -311,9 +311,9 @@ export const Footer: React.FC<FooterProps> = ({ theme, toggleTheme }) => {
             {/* Contact Phone */}
             <div className="space-y-1 pb-4">
               <a
-                href="tel:+8801700000000"
+                href={`tel:${PHONE.replace(/\s/g, '')}`}
                 className="inline-flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded-lg p-1 -ml-1"
-                aria-label="Call +880 17 0000 0000"
+                aria-label={`Call ${PHONE}`}
               >
                 <div className="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 hover:border-blue-500/30 dark:hover:border-blue-500/30 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/20 dark:hover:bg-slate-850/30 transition-all duration-300 flex items-center justify-center shrink-0 group-hover:bg-blue-50 dark:group-hover:bg-slate-900/40">
                   <Smartphone
@@ -323,7 +323,7 @@ export const Footer: React.FC<FooterProps> = ({ theme, toggleTheme }) => {
                   />
                 </div>
                 <span className="font-semibold text-base leading-relaxed max-w-xs block text-left">
-                  +880 17 0000 0000
+                  {PHONE}
                 </span>
               </a>
             </div>
@@ -465,7 +465,7 @@ export const Footer: React.FC<FooterProps> = ({ theme, toggleTheme }) => {
                   label="Facebook"
                 />
                 <SocialLink
-                  href="https://wa.me/8801700000000"
+                  href={`https://wa.me/${PHONE.replace(/[^0-9]/g, '')}`}
                   icon={MessageCircle}
                   label="WhatsApp"
                 />

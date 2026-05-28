@@ -15,7 +15,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { Button } from "./ui/Button";
-import { CONTACT_EMAIL, ADDRESS } from "../constants";
+import { CONTACT_EMAIL, PHONE, ADDRESS } from "../constants";
 import { SectionId } from "../types";
 
 export const Contact: React.FC = () => {
@@ -356,10 +356,10 @@ export const Contact: React.FC = () => {
                     </div>
                     <div className="flex flex-col justify-center text-sm lg:text-base font-bold text-slate-900 dark:text-slate-100 leading-relaxed py-0.5">
                       <a
-                        href="tel:+88017123456789"
+                        href={`tel:${PHONE.replace(/\s/g, '')}`}
                         className="hover:text-green-600 transition-colors lowercase tracking-tight flex items-center h-full"
                       >
-                        +88017123456789
+                        {PHONE}
                       </a>
                     </div>
                   </div>

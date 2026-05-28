@@ -3,6 +3,7 @@ import { Service, Project, Testimonial, NavItem, SectionId, TechDomain, ProcessS
 export const COMPANY_NAME = "OITS Dhaka";
 export const TAGLINE = "Digital Mastery Engineered for Performance";
 export const CONTACT_EMAIL = "info@oitsdhaka.com";
+export const PHONE = "+880 1886 452 906";
 export const ADDRESS = "House # 42, Road # 2/A, Block # Z, Dhaka 1209, Bangladesh";
 
 export const NAV_ITEMS: NavItem[] = [
@@ -22,38 +23,31 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const PROCESS_STEPS: ProcessStep[] = [
   {
-    id: 'discovery',
+    id: 'select',
     number: '01',
-    title: 'Discovery & Strategy',
-    description: 'We dive deep into your business goals, target audience, and market landscape to define a clear roadmap.',
+    title: 'Select a Project',
+    description: 'Tell us what you need. Whether it\'s a custom application, system integration, or support service, we begin by understanding your goals.',
     icon: 'Search',
   },
   {
-    id: 'design',
+    id: 'analysis',
     number: '02',
-    title: 'Design & Prototyping',
-    description: 'Our design team creates intuitive, user-centric interfaces and interactive prototypes for early validation.',
+    title: 'Project Analysis',
+    description: 'Our team analyses the scope, requirements, and technical challenges to propose the best approach within your timeline and budget.',
     icon: 'Layers',
   },
   {
-    id: 'development',
+    id: 'execute',
     number: '03',
-    title: 'Agile Development',
-    description: 'Using high-performance tech stacks, we build your solution in sprints, ensuring transparency and quality.',
+    title: 'Plan & Execute',
+    description: 'We prepare a detailed roadmap and get to work. Our agile teams deliver fast iterations with transparent updates and collaboration.',
     icon: 'Code',
   },
   {
-    id: 'testing',
+    id: 'deliver',
     number: '04',
-    title: 'Quality Assurance',
-    description: 'Rigorous manual and automated testing ensures your product is bug-free, secure, and ready for scale.',
-    icon: 'ShieldCheck',
-  },
-  {
-    id: 'deployment',
-    number: '05',
-    title: 'Launch & Evolution',
-    description: 'We handle the deployment and provide ongoing support to scale your product based on user feedback.',
+    title: 'Deliver Results',
+    description: 'On time, on budget, and fully tested. We deliver solutions that work — and support you beyond launch.',
     icon: 'Rocket',
   },
 ];
@@ -271,19 +265,35 @@ export const PROJECTS: Project[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 't1',
-    name: 'Sarah Johnson',
-    role: 'CTO',
-    company: 'TechFlow Global',
-    content: "OITS Dhaka is not just a vendor; they are our technology partners. Their ability to translate complex requirements into clean code is exceptional.",
-    avatar: 'https://i.pravatar.cc/150?u=sarah',
+    name: 'David Fernandes',
+    role: 'CEO',
+    company: 'Anaton',
+    content: "OITS Dhaka delivered beyond expectations. Their secure, scalable development approach and transparent communication made them our trusted global partner from day one.",
+    avatar: 'https://i.pravatar.cc/150?u=david_fernandes',
   },
   {
     id: 't2',
-    name: 'Rahat Ahmed',
-    role: 'Founder',
-    company: 'Pathao (Demo)',
-    content: "The engineering discipline and communication standard maintained by OITS Dhaka helped us ship our MVP weeks ahead of schedule.",
-    avatar: 'https://i.pravatar.cc/150?u=rahat',
+    name: 'Jackline Techie',
+    role: 'CEO',
+    company: 'Kormola',
+    content: "From MVP scoping to production launch, the OITS team brought world-class engineering discipline and speed. Our product shipped on time and within budget — a rare feat.",
+    avatar: 'https://i.pravatar.cc/150?u=jackline_techie',
+  },
+  {
+    id: 't3',
+    name: 'Abraham Khalil',
+    role: 'CEO',
+    company: 'Anatora',
+    content: "The technical depth OITS brings to complex integrations is unmatched. They modernised our entire legacy stack without disrupting our operations for a single day.",
+    avatar: 'https://i.pravatar.cc/150?u=abraham_khalil',
+  },
+  {
+    id: 't4',
+    name: 'Md Sumon Mia',
+    role: 'CEO',
+    company: 'Rimasu',
+    content: "OITS understood our local market nuances while delivering solutions built to international standards. The quality and reliability of their work is genuinely world-class.",
+    avatar: 'https://i.pravatar.cc/150?u=sumon_mia',
   },
 ];
 

@@ -1,28 +1,28 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { CheckCircle2, Target, Heart, Users } from 'lucide-react';
+import { CheckCircle2, Target, Globe, ShieldCheck, Users } from 'lucide-react';
 import { SectionId } from '../types';
 
-const TEAM = [
-  {
-    name: 'Alex Morgan',
-    role: 'CEO & Founder',
-    image: 'https://picsum.photos/400/400?random=20',
-  },
-  {
-    name: 'Sarah Chen',
-    role: 'Lead Architect',
-    image: 'https://picsum.photos/400/400?random=21',
-  },
-  {
-    name: 'James Wilson',
-    role: 'Head of Design',
-    image: 'https://picsum.photos/400/400?random=22',
-  },
-  {
-    name: 'Maria Garcia',
-    role: 'Project Manager',
-    image: 'https://picsum.photos/400/400?random=23',
-  },
+const STATS = [
+  { value: '412+', label: 'Projects Completed' },
+  { value: '200+', label: 'Satisfied Clients' },
+  { value: '100+', label: 'Skilled Experts' },
+  { value: '10+', label: 'Years of Excellence' },
+];
+
+const OFFICES = [
+  { city: 'Dhaka', country: 'Bangladesh', role: 'Engineering Hub' },
+  { city: 'Singapore', country: 'Singapore', role: 'APAC Ops' },
+  { city: 'Kuala Lumpur', country: 'Malaysia', role: 'APAC Partner' },
+  { city: 'London', country: 'United Kingdom', role: 'Europe HQ' },
+];
+
+const CORE_VALUES = [
+  'ISO 27001 Certified Security',
+  'GDPR-Compliant Practices',
+  '24/7 Maintenance & Support',
+  'Dedicated Agile Teams',
+  'Global Delivery Standards',
+  'Top-tier Cybersecurity',
 ];
 
 export const About: React.FC = () => {
@@ -31,14 +31,14 @@ export const About: React.FC = () => {
   const [isMissionVisible, setIsMissionVisible] = useState(false);
   const [isValuesVisible, setIsValuesVisible] = useState(false);
   const [isStatsVisible, setIsStatsVisible] = useState(false);
-  const [isTeamVisible, setIsTeamVisible] = useState(false);
+  const [isOfficesVisible, setIsOfficesVisible] = useState(false);
 
   // Refs for each section part
   const heroRef = useRef<HTMLDivElement>(null);
   const missionRef = useRef<HTMLDivElement>(null);
   const valuesRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
-  const teamRef = useRef<HTMLDivElement>(null);
+  const officesRef = useRef<HTMLDivElement>(null);
 
   // Helper hook for intersection observer
   useEffect(() => {
@@ -59,15 +59,15 @@ export const About: React.FC = () => {
     const heroObs = observeElement(heroRef, setIsHeroVisible, 0.1);
     const missionObs = observeElement(missionRef, setIsMissionVisible, 0.2);
     const valuesObs = observeElement(valuesRef, setIsValuesVisible, 0.2);
-    const statsObs = observeElement(statsRef, setIsStatsVisible, 0.5);
-    const teamObs = observeElement(teamRef, setIsTeamVisible, 0.15);
+    const statsObs = observeElement(statsRef, setIsStatsVisible, 0.4);
+    const officesObs = observeElement(officesRef, setIsOfficesVisible, 0.15);
 
     return () => {
       heroObs.disconnect();
       missionObs.disconnect();
       valuesObs.disconnect();
       statsObs.disconnect();
-      teamObs.disconnect();
+      officesObs.disconnect();
     };
   }, []);
 
@@ -80,8 +80,8 @@ export const About: React.FC = () => {
           <div ref={heroRef} className={`flex-1 w-full relative transition-all duration-1000 ease-out ${isHeroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
              <div className="relative aspect-square rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-2xl group">
                 <img 
-                  src="https://picsum.photos/800/800?random=15" 
-                  alt="Team collaboration" 
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" 
+                  alt="OITS Dhaka engineering team collaborating" 
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -95,7 +95,7 @@ export const About: React.FC = () => {
              {/* Floater */}
              <div className="absolute -bottom-8 -right-8 w-48 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 hidden md:block z-10 transition-transform duration-500 hover:scale-105">
                <p className="text-slate-500 dark:text-slate-400 text-xs uppercase font-semibold mb-2">Projects Completed</p>
-               <p className="text-4xl font-bold text-blue-600 dark:text-blue-400">150+</p>
+               <p className="text-4xl font-bold text-blue-600 dark:text-blue-400">412+</p>
              </div>
           </div>
 
@@ -105,34 +105,42 @@ export const About: React.FC = () => {
               <div>
                 <div className="flex items-center gap-2 mb-3">
                    <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                   <h2 className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Our Mission & Vision</h2>
+                   <h2 className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">About OITS</h2>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white leading-tight">
-                  Partnering with startups and enterprises to build the future.
+                  Global Tech Solutions.<br />Enterprise-Ready.
                 </h3>
               </div>
               
               <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
-                We are a team of passionate developers, designers, and strategists dedicated to delivering digital solutions that make a difference. At OITS Dhaka, we don't just write code; we solve complex business problems through innovation.
+                OITS is your international software engineering partner, delivering secure, scalable solutions across software development, cloud, data, cybersecurity, and blockchain. Our ISO 27001 and GDPR-compliant practices ensure trust at every level.
               </p>
+
+              {/* Mission Block */}
+              <div className="p-5 rounded-2xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/40">
+                <p className="text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">Our Mission</p>
+                <p className="text-slate-700 dark:text-slate-300 text-base leading-relaxed">
+                  Delivering secure, high-quality, and scalable software that drives growth, enhances operations, and supports digital transformation—guided by global standards and local expertise.
+                </p>
+              </div>
             </div>
 
             {/* Core Values Subsection */}
             <div ref={valuesRef} className={`transition-all duration-1000 ease-out ${isValuesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                <div className="flex items-center gap-2 mb-6">
-                   <Heart className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                   <h4 className="text-lg font-bold text-slate-900 dark:text-white">Core Values</h4>
+                   <ShieldCheck className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                   <h4 className="text-lg font-bold text-slate-900 dark:text-white">Core Standards</h4>
                </div>
                
-               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {['Agile Methodology', '24/7 Support', 'Dedicated Teams', 'Top-tier Security'].map((item, idx) => (
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {CORE_VALUES.map((item, idx) => (
                     <div 
                       key={item} 
                       className={`flex items-center gap-3 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-transparent hover:border-blue-100 dark:hover:border-blue-900/50 transition-all duration-500`} 
-                      style={{ transitionDelay: isValuesVisible ? `${idx * 100}ms` : '0ms' }}
+                      style={{ transitionDelay: isValuesVisible ? `${idx * 80}ms` : '0ms' }}
                     >
                       <CheckCircle2 className="text-green-500 w-5 h-5 flex-shrink-0" />
-                      <span className="font-medium text-slate-800 dark:text-slate-200">{item}</span>
+                      <span className="font-medium text-slate-800 dark:text-slate-200 text-sm">{item}</span>
                     </div>
                   ))}
                </div>
@@ -141,52 +149,44 @@ export const About: React.FC = () => {
             {/* Stats Subsection */}
             <div ref={statsRef} className={`pt-4 transition-all duration-1000 ease-out ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                <div className="h-px w-full bg-slate-200 dark:bg-slate-800 mb-8"></div>
-               <div className="flex gap-12">
-                 <div>
-                   <p className="text-3xl font-bold text-slate-900 dark:text-white">50+</p>
-                   <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Experts</p>
-                 </div>
-                 <div>
-                   <p className="text-3xl font-bold text-slate-900 dark:text-white">98%</p>
-                   <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Client Retention</p>
-                 </div>
+               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                 {STATS.map((stat, idx) => (
+                   <div key={stat.label} style={{ transitionDelay: isStatsVisible ? `${idx * 100}ms` : '0ms' }}>
+                     <p className="text-3xl font-bold text-slate-900 dark:text-white">{stat.value}</p>
+                     <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-tight">{stat.label}</p>
+                   </div>
+                 ))}
                </div>
             </div>
           </div>
         </div>
 
-        {/* Team Section */}
-        <div ref={teamRef}>
-          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isTeamVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        {/* Global Offices Section */}
+        <div ref={officesRef}>
+          <div className={`text-center mb-12 transition-all duration-1000 ease-out ${isOfficesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="flex items-center justify-center gap-2 mb-3">
-              <Users className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              <h2 className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Our Team</h2>
+              <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <h2 className="text-sm font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Global Presence</h2>
             </div>
-            <h3 className="text-3xl font-bold text-slate-900 dark:text-white">Meet the minds behind the magic.</h3>
+            <h3 className="text-3xl font-bold text-slate-900 dark:text-white">Engineering hub in Dhaka.<br />Commercial reach worldwide.</h3>
+            <p className="text-slate-500 dark:text-slate-400 mt-3 max-w-2xl mx-auto">
+              With our development hub in Dhaka and commercial teams in Singapore, Malaysia, the United Kingdom, and Europe, we provide local engagement supported by global standards.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {TEAM.map((member, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {OFFICES.map((office, index) => (
               <div 
-                key={member.name}
-                className={`group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-1000 ease-out transform ${isTeamVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
-                style={{ transitionDelay: isTeamVisible ? `${index * 150}ms` : '0ms' }}
+                key={office.city}
+                className={`group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-700 ease-out transform border border-slate-100 dark:border-slate-700 hover:border-blue-200 dark:hover:border-blue-800 p-6 ${isOfficesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                style={{ transitionDelay: isOfficesVisible ? `${index * 150}ms` : '0ms' }}
               >
-                <div className="aspect-[4/5] overflow-hidden bg-slate-200 dark:bg-slate-700 relative">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-90 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm p-4 rounded-xl border border-slate-100 dark:border-slate-700 shadow-lg">
-                    <h4 className="font-bold text-slate-900 dark:text-white text-base sm:text-lg">{member.name}</h4>
-                    <p className="text-xs sm:text-sm text-blue-600 dark:text-blue-400 font-medium">{member.role}</p>
-                  </div>
-                </div>
+                <p className="text-xs font-black uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-1">{office.role}</p>
+                <h4 className="font-bold text-slate-900 dark:text-white text-lg">{office.city}</h4>
+                <p className="text-sm text-slate-500 dark:text-slate-400">{office.country}</p>
               </div>
             ))}
           </div>
