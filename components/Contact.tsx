@@ -98,7 +98,7 @@ export const Contact: React.FC = () => {
       className="py-8 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-500 relative overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-[45%] h-full bg-blue-100/40 dark:bg-blue-900/5 -skew-x-12 transform translate-x-1/4 pointer-events-none" />
-      <div className="container mx-auto px-6 relative z-10 w-full max-w-7xl">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="relative grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-start mb-8">
           {/* Vertical Divider for Contact Grid Accordance with Section 6 */}
           <div className="hidden lg:block absolute top-0 bottom-0 left-[60%] -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-slate-200/60 dark:via-slate-850 to-transparent" />
@@ -126,10 +126,10 @@ export const Contact: React.FC = () => {
 
           <div className="relative transition-all duration-1000 delay-300 ease-out transform-gpu lg:col-span-2 lg:pl-4">
             <div
-              className={`relative bg-white dark:bg-slate-900 p-3 sm:p-4 md:p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl transition-all duration-700 overflow-hidden ${status === "sending" ? "scale-[0.98]" : "scale-100"}`}
+              className={`relative bg-white dark:bg-slate-950/40 p-3 sm:p-4 md:p-5 rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-xl dark:glass-card-glow transition-all duration-700 overflow-hidden ${status === "sending" ? "scale-[0.98]" : "scale-100"}`}
             >
               {status === "sending" && (
-                <div className="absolute inset-0 z-50 bg-white/70 dark:bg-slate-900/85 backdrop-blur-[6px] flex flex-col items-center justify-center animate-in fade-in duration-500">
+                <div className="absolute inset-0 z-50 bg-white/70 dark:bg-slate-950/85 backdrop-blur-[6px] flex flex-col items-center justify-center animate-in fade-in duration-500">
                   <div className="relative mb-10">
                     <Loader2
                       size={100}
@@ -147,7 +147,7 @@ export const Contact: React.FC = () => {
                   </div>
                 </div>
               )}
-
+ 
               {status === "success" ? (
                 <div className="text-center py-6 animate-in zoom-in-95 duration-700">
                   <div className="w-12 h-12 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center text-green-600 dark:text-green-400 mx-auto mb-3.5 shadow-md shadow-green-500/10 ring-2 ring-green-500/10">
@@ -176,7 +176,7 @@ export const Contact: React.FC = () => {
                   <h4 className="text-xl font-black mb-1 text-slate-950 dark:text-white tracking-tighter">
                     Transmission Failed
                   </h4>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 max-w-sm mx-auto font-medium">
+                  <p className="text-slate-650 dark:text-slate-400 text-sm mb-4 max-w-sm mx-auto font-medium">
                     Network timeout. Please retry the connection.
                   </p>
                   <Button
@@ -211,7 +211,7 @@ export const Contact: React.FC = () => {
                         aria-describedby={
                           errors.name ? "name-error" : undefined
                         }
-                        className={`w-full bg-slate-50 dark:bg-slate-950 border ${errors.name ? "border-red-500 focus:border-red-500" : "border-slate-400 dark:border-slate-600 focus:border-blue-600"} rounded-xl px-4 py-2.5 text-slate-950 dark:text-white focus:outline-none focus:ring-4 focus:ring-blue-600/20 transition-all font-bold shadow-sm placeholder:text-slate-405 dark:placeholder:text-slate-650 text-xs`}
+                        className={`w-full bg-slate-50 dark:bg-slate-900/50 border ${errors.name ? "border-red-500 focus:border-red-500" : "border-slate-400 dark:border-slate-800 focus:border-blue-500"} rounded-xl px-4 py-2.5 text-slate-950 dark:text-white focus:outline-none focus:ring-4 focus:ring-blue-600/20 transition-all font-bold shadow-sm placeholder:text-slate-405 dark:placeholder:text-slate-600 text-xs`}
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) =>
@@ -243,7 +243,7 @@ export const Contact: React.FC = () => {
                         aria-describedby={
                           errors.email ? "email-error" : undefined
                         }
-                        className={`w-full bg-slate-50 dark:bg-slate-950 border ${errors.email ? "border-red-500 focus:border-red-500" : "border-slate-400 dark:border-slate-600 focus:border-blue-600"} rounded-xl px-4 py-2.5 text-slate-950 dark:text-white focus:outline-none focus:ring-4 focus:ring-blue-600/20 transition-all font-bold shadow-sm placeholder:text-slate-405 dark:placeholder:text-slate-650 text-xs`}
+                        className={`w-full bg-slate-50 dark:bg-slate-900/50 border ${errors.email ? "border-red-500 focus:border-red-500" : "border-slate-400 dark:border-slate-800 focus:border-blue-500"} rounded-xl px-4 py-2.5 text-slate-950 dark:text-white focus:outline-none focus:ring-4 focus:ring-blue-600/20 transition-all font-bold shadow-sm placeholder:text-slate-405 dark:placeholder:text-slate-600 text-xs`}
                         placeholder="you@company.com"
                         value={formData.email}
                         onChange={(e) =>
@@ -275,7 +275,7 @@ export const Contact: React.FC = () => {
                         errors.message ? "message-error" : undefined
                       }
                       rows={4}
-                      className={`w-full bg-slate-50 dark:bg-slate-950 border ${errors.message ? "border-red-500 focus:border-red-500" : "border-slate-400 dark:border-slate-600 focus:border-blue-600"} rounded-xl px-4 py-3 text-slate-950 dark:text-white focus:outline-none focus:ring-4 focus:ring-blue-600/20 transition-all resize-none font-bold shadow-sm placeholder:text-slate-405 dark:placeholder:text-slate-650 text-xs`}
+                      className={`w-full bg-slate-50 dark:bg-slate-900/50 border ${errors.message ? "border-red-500 focus:border-red-500" : "border-slate-400 dark:border-slate-800 focus:border-blue-500"} rounded-xl px-4 py-3 text-slate-950 dark:text-white focus:outline-none focus:ring-4 focus:ring-blue-600/20 transition-all resize-none font-bold shadow-sm placeholder:text-slate-405 dark:placeholder:text-slate-600 text-xs`}
                       placeholder="What are we building?"
                       value={formData.message}
                       onChange={(e) =>

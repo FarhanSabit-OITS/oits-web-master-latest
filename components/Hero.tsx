@@ -116,7 +116,7 @@ export const Hero: React.FC = () => {
 
       {/* Heavier Gradient Overlay for Guaranteed Legibility */}
       <div 
-        className="absolute inset-0 z-0 bg-gradient-to-r from-slate-50 via-slate-50/95 to-slate-50/80 dark:from-slate-950 dark:via-slate-950/95 dark:to-slate-950/80 pointer-events-none animate-gradient-shift" 
+        className="absolute inset-0 z-0 bg-gradient-to-r from-slate-50 via-slate-50/95 to-slate-50/80 dark:from-slate-950 dark:via-slate-950/85 dark:to-slate-950 pointer-events-none animate-gradient-shift" 
         style={{ backgroundSize: '200% 200%' }}
       />
 
@@ -130,7 +130,7 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Column: Content */}
@@ -146,7 +146,7 @@ export const Hero: React.FC = () => {
               {TAGLINE.split(' ').map((word, i) => (
                 <span 
                   key={i} 
-                  className={`${i < 2 ? 'text-slate-950 dark:text-white drop-shadow-md text-glow' : 'text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-indigo-700 dark:from-blue-400 dark:to-indigo-400 drop-shadow-lg'} inline-block transition-all duration-[1000ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] transform-gpu will-change-transform backface-hidden`}
+                  className={`${i < 2 ? 'text-slate-950 dark:text-white drop-shadow-md text-glow' : 'text-transparent bg-clip-text bg-gradient-to-br from-slate-900 to-slate-700 dark:from-white dark:to-slate-400 drop-shadow-lg'} inline-block transition-all duration-[1000ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] transform-gpu will-change-transform backface-hidden`}
                   style={{ 
                     transitionDelay: `${150 + i * 150}ms`,
                     opacity: isVisible ? 1 : 0,
@@ -176,11 +176,11 @@ export const Hero: React.FC = () => {
               style={{ transitionDelay: '900ms' }}
             >
               {SERVICES.slice(0, 4).map((service, i) => (
-                <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-white/40 dark:bg-slate-800/40 border border-white/50 dark:border-slate-700/50 backdrop-blur-md hover:bg-white/60 dark:hover:bg-slate-800/60 transition-colors group cursor-default shadow-sm">
+                <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-white/40 dark:bg-slate-950/20 border border-white/50 dark:border-slate-850/60 backdrop-blur-md hover:bg-white/60 dark:hover:bg-slate-950/40 transition-colors group cursor-default shadow-sm">
                   <div className="p-2 rounded-lg bg-white/50 dark:bg-slate-900/50 group-hover:scale-110 transition-transform duration-300">
-                    {i === 0 && <Globe size={18} className="text-blue-600 dark:text-blue-400" aria-hidden="true" />}
-                    {i === 1 && <Smartphone size={18} className="text-indigo-600 dark:text-indigo-400" aria-hidden="true" />}
-                    {i === 2 && <Code2 size={18} className="text-purple-600 dark:text-purple-400" aria-hidden="true" />}
+                    {i === 0 && <Globe size={18} className="text-blue-600 dark:text-sky-400" aria-hidden="true" />}
+                    {i === 1 && <Smartphone size={18} className="text-indigo-600 dark:text-sky-400" aria-hidden="true" />}
+                    {i === 2 && <Code2 size={18} className="text-purple-600 dark:text-sky-400" aria-hidden="true" />}
                     {i === 3 && <Cloud size={18} className="text-sky-600 dark:text-sky-400" aria-hidden="true" />}
                   </div>
                   <div>
@@ -196,10 +196,10 @@ export const Hero: React.FC = () => {
               className={`mb-10 transition-all duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
               style={{ transitionDelay: '950ms' }}
             >
-              <div className="relative p-6 rounded-2xl bg-white/40 dark:bg-slate-800/40 backdrop-blur-md border border-white/50 dark:border-slate-700/50 shadow-sm overflow-hidden group">
+              <div className="relative p-6 rounded-2xl bg-white/40 dark:bg-slate-950/20 backdrop-blur-md border border-white/50 dark:border-slate-850/60 shadow-sm overflow-hidden group">
                 <Quote size={40} className="absolute -top-2 -right-2 text-blue-500/10 dark:text-blue-400/10 transform -rotate-12 group-hover:scale-110 transition-transform duration-500" />
                 <div className="relative z-10">
-                  <p className="text-sm md:text-base text-slate-800 dark:text-slate-200 italic mb-4 line-clamp-2 min-h-[2.5rem]">
+                  <p className="text-sm md:text-base text-slate-850 dark:text-slate-250 italic mb-4 line-clamp-2 min-h-[2.5rem]">
                     "{TESTIMONIALS[activeTestimonialIndex].content}"
                   </p>
                   <div className="flex items-center justify-between">
@@ -228,7 +228,7 @@ export const Hero: React.FC = () => {
                 variant="primary" 
                 size="lg" 
                 onClick={scrollToContact} 
-                className="w-full sm:w-auto relative z-20 font-black tracking-widest text-sm md:text-base border-2 border-slate-900 dark:border-blue-500 hover:border-slate-800 dark:hover:border-blue-400 ring-2 ring-white/30 dark:ring-blue-900/50 shadow-xl shadow-blue-900/20 whitespace-nowrap"
+                className="w-full sm:w-auto relative z-20 font-black tracking-widest text-[10px] tracking-widest uppercase md:text-xs border-2 border-slate-900 dark:border-blue-600 hover:border-slate-855 dark:hover:border-sky-500 ring-2 ring-white/30 dark:ring-blue-900/40 shadow-xl dark:shadow-neon-blue whitespace-nowrap hover:scale-105 hover:-translate-y-0.5 transition-all duration-300"
                 aria-label="Get a quote for your project"
               >
                 <div className="flex flex-row items-center gap-2">
@@ -239,7 +239,7 @@ export const Hero: React.FC = () => {
                 variant="outline" 
                 size="lg" 
                 onClick={scrollToContact} 
-                className="w-full sm:w-auto relative z-20 font-black tracking-widest text-sm md:text-base bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-slate-300 dark:border-slate-600 text-slate-950 dark:text-white hover:bg-white dark:hover:bg-slate-800 shadow-lg"
+                className="w-full sm:w-auto relative z-20 font-black tracking-widest text-[10px] tracking-widest uppercase md:text-xs bg-white/80 dark:bg-slate-950/40 backdrop-blur-xl border-slate-300 dark:border-slate-800/80 text-slate-950 dark:text-white hover:bg-white dark:hover:bg-slate-900/50 shadow-lg transition-all duration-300"
                 aria-label="Request a demo consultation"
               >
                 REQUEST DEMO
@@ -273,7 +273,7 @@ export const Hero: React.FC = () => {
                   <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 
                   {/* Card Container */}
-                  <div className="relative z-10 w-full bg-white/10 dark:bg-slate-900/40 backdrop-blur-md border border-white/20 dark:border-slate-700/50 rounded-3xl p-6 shadow-2xl transition-all duration-500 hover:shadow-blue-500/10 group">
+                  <div className="relative z-10 w-full bg-white/10 dark:bg-slate-950/40 backdrop-blur-md border border-white/20 dark:border-slate-800/80 rounded-3xl p-6 shadow-2xl transition-all duration-500 hover:border-slate-700/60 dark:glass-card-glow group">
                     
                     {/* Header */}
                     <div className="flex justify-between items-center mb-4">

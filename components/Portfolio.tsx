@@ -73,7 +73,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ type: 'spring', damping: 25, stiffness: 350 }}
-        className="relative bg-white dark:bg-slate-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-2xl border border-slate-200 dark:border-slate-800 no-scrollbar outline-none"
+        className="relative bg-white dark:bg-slate-950/90 backdrop-blur-md w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-2xl border border-slate-200 dark:border-slate-800/80 no-scrollbar outline-none"
         tabIndex={-1}
       >
         <button 
@@ -324,7 +324,7 @@ export const Portfolio: React.FC = () => {
       id={SectionId.PORTFOLIO} 
       className="py-32 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 relative overflow-hidden"
     >
-      <div className="container mx-auto px-6 max-w-7xl relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Dynamic Swiss Editorial Section Header */}
         <div className={`mb-16 transition-all duration-1000 transform-gpu ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
@@ -340,7 +340,7 @@ export const Portfolio: React.FC = () => {
         </div>
 
         {/* ECOSYSTEM DENSITY VISUALIZER (Recharts Ecosystem Bar Chart Chart) */}
-        <div className={`mb-16 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/65 rounded-[2.5rem] p-6 md:p-8 shadow-sm transition-all duration-1000 transform-gpu ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '100ms' }}>
+        <div className={`mb-16 bg-white dark:bg-slate-950/40 border border-slate-200/60 dark:border-slate-800/80 rounded-[2.5rem] p-6 md:p-8 shadow-sm dark:glass-card-glow transition-all duration-1000 transform-gpu ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{ transitionDelay: '100ms' }}>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-850 text-slate-600 dark:text-slate-400 text-[10px] font-mono font-black uppercase tracking-widest mb-2 border border-slate-200/50 dark:border-slate-700/50">
@@ -426,7 +426,7 @@ export const Portfolio: React.FC = () => {
           
           {/* CONCURRENT FILTER PIPE PANEL */}
           <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
-            <div className="bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800/70 p-6 md:p-8 rounded-[2.5rem] shadow-sm">
+            <div className="bg-white dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800/80 p-6 md:p-8 rounded-[2.5rem] shadow-sm">
               <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-100 dark:border-slate-800/80">
                 <div className="flex items-center gap-2">
                   <Filter size={16} className="text-slate-800 dark:text-blue-400" />
@@ -543,7 +543,7 @@ export const Portfolio: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   key="empty-state"
-                  className="w-full h-[400px] flex flex-col justify-center items-center text-center p-8 bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-850 border-dashed rounded-[2.5rem]"
+                  className="w-full h-[400px] flex flex-col justify-center items-center text-center p-8 bg-white dark:bg-slate-950/40 border border-slate-200/50 dark:border-slate-800 border-dashed rounded-[2.5rem]"
                 >
                   <Grid size={44} className="text-slate-300 dark:text-slate-800 mb-4 animate-[spin_6s_linear_infinite]" />
                   <h4 className="text-lg font-black text-slate-900 dark:text-white mb-2">No Matching Configurations Found.</h4>
@@ -572,7 +572,7 @@ export const Portfolio: React.FC = () => {
                       exit={{ opacity: 0, scale: 0.95 }}
                       transition={{ duration: 0.5, delay: Math.min(index * 0.05, 0.2), ease: [0.16, 1, 0.3, 1] }}
                       key={project.id}
-                      className="group bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 rounded-[2.2rem] overflow-hidden hover:border-slate-300 dark:hover:border-blue-500/30 hover:-translate-y-1 hover:scale-[1.01] transition-all duration-500 hover:shadow-2xl flex flex-col h-full transform-gpu will-change-transform relative"
+                      className="group bg-white dark:bg-slate-950/40 border border-slate-200/60 dark:border-slate-800/80 rounded-[2.2rem] overflow-hidden hover:border-slate-300 dark:hover:border-slate-700/80 dark:glass-card-glow hover:-translate-y-1 hover:scale-[1.01] transition-all duration-500 flex flex-col h-full transform-gpu will-change-transform relative"
                     >
                       {/* Interactive Visual Thumbnail */}
                       <div className="aspect-[16/10] overflow-hidden bg-slate-950 relative border-b border-slate-100 dark:border-slate-800/65">

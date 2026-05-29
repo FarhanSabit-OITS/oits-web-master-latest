@@ -24,6 +24,11 @@ module.exports = {
           900: '#0c4a6e',
         }
       },
+      boxShadow: {
+        'neon-cyan': '0 0 20px rgba(34, 211, 238, 0.3)',
+        'neon-blue': '0 0 25px rgba(14, 165, 233, 0.35)',
+        'glass': '0 8px 32px 0 rgba(2, 6, 23, 0.7)',
+      },
       animation: {
         'marquee': 'marquee 25s linear infinite',
         'float': 'float 6s ease-in-out infinite',

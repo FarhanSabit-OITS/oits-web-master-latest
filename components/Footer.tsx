@@ -180,7 +180,7 @@ export const Footer: React.FC<FooterProps> = ({ theme, toggleTheme }) => {
       {/* Editorial Decorative Grid Backplane */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-850 to-transparent" />
 
-      <div className="container mx-auto px-8 max-w-7xl relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Row 1: Brand Identifier & Newsroom Newsletter Subscription Engine (2 Columns) */}
         <div className="relative grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-3 pb-5 border-b border-slate-200/60 dark:border-slate-900">
           {/* Vertical Divider for Row 1 */}
@@ -394,7 +394,7 @@ export const Footer: React.FC<FooterProps> = ({ theme, toggleTheme }) => {
                       onBlur={() => setIsFocused(false)}
                       placeholder="Work email address"
                       aria-describedby="email-validation-tip"
-                      className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 rounded-lg px-3 py-2 text-xs focus:outline-none text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 font-bold tracking-tight transition-all duration-300"
+                      className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200/70 dark:border-slate-800 rounded-lg px-3 py-2 text-xs focus:outline-none text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-650 font-bold tracking-tight transition-all duration-300"
                       required
                     />
 
@@ -419,7 +419,7 @@ export const Footer: React.FC<FooterProps> = ({ theme, toggleTheme }) => {
                         : status === "invalid_work" ||
                             status === "invalid_format"
                           ? "bg-slate-100 dark:bg-slate-900 text-slate-400 dark:text-slate-700 cursor-not-allowed border border-dashed border-slate-200 dark:border-slate-800/60"
-                          : "bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/10"
+                          : "bg-blue-600 hover:bg-sky-500 hover:shadow-neon-blue text-white shadow-md transition-all duration-300"
                     }`}
                     aria-label="Confirm enterprise newsroom signup"
                   >

@@ -25,7 +25,7 @@ export const Testimonials: React.FC = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white dark:bg-slate-900 overflow-hidden transition-colors duration-300">
+    <section ref={sectionRef} className="py-24 bg-white dark:bg-slate-950 overflow-hidden transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className={`flex flex-col md:flex-row items-end justify-between mb-16 gap-6 transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <div>
@@ -39,12 +39,12 @@ export const Testimonials: React.FC = () => {
             <div className="w-3 h-3 rounded-full bg-slate-200 dark:bg-slate-700"></div>
           </div>
         </div>
-
+ 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {TESTIMONIALS.map((t, index) => (
             <div 
               key={t.id} 
-              className={`bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl relative transition-all duration-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`bg-slate-50 dark:bg-slate-950/40 border border-slate-200 dark:border-slate-800/80 backdrop-blur-sm p-8 rounded-3xl relative transition-all duration-700 ease-out hover:border-slate-700/60 dark:glass-card-glow ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <Quote className="text-blue-100 dark:text-blue-900 w-12 h-12 mb-6" />

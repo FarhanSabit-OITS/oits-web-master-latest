@@ -54,11 +54,11 @@ const CATEGORIES = [
 // 1. DYNAMIC SKELETON LOADING STATE Component
 const ServiceSkeleton: React.FC = () => {
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[2.5rem] p-8 sm:p-10 shadow-sm animate-pulse flex flex-col justify-between h-full relative overflow-hidden">
+    <div className="bg-white dark:bg-slate-950/40 border border-slate-200 dark:border-slate-800/80 rounded-[2.5rem] p-8 sm:p-10 shadow-sm animate-pulse flex flex-col justify-between h-full relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-100/10 to-transparent -translate-x-full animate-shimmer" />
       <div>
         {/* Icon Bounding Shape (~w-16 h-16) */}
-        <div className="w-16 h-16 bg-slate-200 dark:bg-slate-800 rounded-2xl mb-8" />
+        <div className="w-16 h-16 bg-slate-200 dark:bg-slate-900/50 rounded-2xl mb-8" />
 
         {/* Layout Heading Lines (w-3/4 h-7) */}
         <div className="h-7 w-3/4 bg-slate-200 dark:bg-slate-800 rounded-lg mb-6" />
@@ -83,9 +83,9 @@ const ServiceSkeleton: React.FC = () => {
 // Tooltip component for accessibility
 const AccessibleTooltip: React.FC<{ text: string }> = ({ text }) => {
   return (
-    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 p-3 bg-slate-950 text-white text-xs rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-30 border border-slate-850">
+    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 p-3 bg-slate-950/90 text-white text-xs rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-30 border border-slate-800/60 backdrop-blur-md">
       <p className="font-medium text-left leading-relaxed">{text}</p>
-      <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-slate-950" />
+      <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-slate-950/90" />
     </div>
   );
 };
@@ -237,8 +237,8 @@ export const Services: React.FC = () => {
                   }}
                   className={`px-5 py-2.5 rounded-full text-[10px] font-black uppercase tracking-[0.1em] transition-all duration-300 border focus-visible:ring-4 focus-visible:ring-blue-500/20 active:scale-95 whitespace-nowrap ${
                     activeCategory === cat
-                      ? "bg-slate-950 border-slate-950 text-white dark:bg-blue-600 dark:border-blue-600"
-                      : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-850 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700"
+                      ? "bg-slate-950 border-slate-950 text-white dark:bg-blue-600 dark:border-blue-600 dark:shadow-neon-blue"
+                      : "bg-white dark:bg-slate-950/40 border-slate-200 dark:border-slate-800/80 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700"
                   }`}
                   role="button"
                   aria-pressed={activeCategory === cat}
@@ -275,7 +275,7 @@ export const Services: React.FC = () => {
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.05 }}
                       layout
-                      className="group relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-850 rounded-[2.5rem] p-6 sm:p-8 hover:shadow-2xl hover:border-blue-500/30 dark:hover:border-blue-500/30 transition-all duration-500 flex flex-col justify-between h-full hover:-translate-y-2 transform-gpu will-change-transform"
+                      className="group relative bg-white dark:bg-slate-950/40 border border-slate-200 dark:border-slate-800/80 rounded-[2.5rem] p-6 sm:p-8 hover:border-slate-700/60 dark:glass-card-glow transition-all duration-500 flex flex-col justify-between h-full hover:-translate-y-2 transform-gpu will-change-transform"
                       tabIndex={0}
                       role="button"
                       aria-expanded={selectedService?.id === service.id}
@@ -295,7 +295,7 @@ export const Services: React.FC = () => {
                       <div className="flex flex-col grow">
                         {/* Title Row with Icon */}
                         <div className="flex items-center gap-3 mb-4">
-                          <div className="w-10 h-10 shrink-0 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-850 rounded-xl flex items-center justify-center text-slate-800 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 transform-gpu">
+                          <div className="w-10 h-10 shrink-0 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800/85 rounded-xl flex items-center justify-center text-slate-800 dark:text-sky-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 transform-gpu">
                             <SvgIcon className="w-5 h-5 transform group-hover:rotate-6 transition-transform duration-500" />
                           </div>
                           <div>

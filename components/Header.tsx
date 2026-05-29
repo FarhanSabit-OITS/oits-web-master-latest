@@ -46,12 +46,12 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
         isScrolled 
-          ? 'bg-white/95 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 py-3 shadow-lg' 
+          ? 'bg-white/90 dark:bg-slate-950/75 backdrop-blur-md border-b border-slate-200 dark:border-slate-900/60 py-3 shadow-lg' 
           : 'bg-transparent py-5'
       }`}
       role="banner"
     >
-      <div className="container mx-auto px-3 xs:px-4 sm:px-6 flex items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link 
           to="/"
           className="group hover:opacity-90 transition-opacity min-w-0" 
@@ -59,23 +59,23 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
         >
           <BrandLogo />
         </Link>
-
+ 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-1 xl:gap-2" aria-label="Main site navigation">
           {NAV_ITEMS.map((item) => (
             <div key={item.label} className="relative group" onMouseEnter={() => setActiveDropdown(item.label)} onMouseLeave={() => setActiveDropdown(null)}>
               <Link 
                 to={item.href}
-                className={`px-3 xl:px-4 py-2 rounded-full text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-blue-700 dark:hover:text-blue-400 hover:bg-blue-50/80 dark:hover:bg-slate-800 transition-all duration-300 flex items-center gap-1 ${location.pathname === item.href ? 'text-blue-600' : ''}`}
+                className={`px-3 xl:px-4 py-2 rounded-full text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-blue-700 dark:hover:text-sky-400 hover:bg-blue-50/80 dark:hover:bg-slate-900/40 transition-all duration-300 flex items-center gap-1 ${location.pathname === item.href ? 'text-blue-600' : ''}`}
               >
                 {item.label === 'Home' ? <Home size={18} /> : item.label}
                 {item.children && <ChevronDown size={14} />}
               </Link>
               
               {item.children && activeDropdown === item.label && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 animate-in fade-in slide-in-from-top-2">
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white/95 dark:bg-slate-950/90 backdrop-blur-md rounded-xl shadow-xl border border-slate-200 dark:border-slate-800/60 p-2 animate-in fade-in slide-in-from-top-2">
                   {item.children.map(child => (
-                    <Link key={child.label} to={child.href} className="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-slate-800 rounded-lg">{child.label}</Link>
+                    <Link key={child.label} to={child.href} className="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-slate-900/40 rounded-lg">{child.label}</Link>
                   ))}
                 </div>
               )}
@@ -85,14 +85,14 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
           <div className="ml-2 pl-2 border-l border-slate-200 dark:border-slate-700 flex items-center gap-2">
              <button
               onClick={toggleTheme}
-              className="p-2 rounded-full text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all active:rotate-12"
+              className="p-2 rounded-full text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900/40 transition-all active:rotate-12"
               aria-label={theme === 'dark' ? 'Switch to light visual mode' : 'Switch to dark visual mode'}
              >
                 {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
              </button>
              <Link
                to="/contact"
-               className="inline-flex items-center gap-1.5 whitespace-nowrap px-4 py-2 rounded-full text-sm font-black text-white bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all duration-200 shadow-sm shadow-blue-600/30"
+               className="inline-flex items-center gap-1.5 whitespace-nowrap px-4 py-2.5 rounded-full text-[10px] tracking-widest font-black text-white bg-blue-600 hover:bg-sky-500 hover:shadow-neon-blue active:scale-95 transition-all duration-300 uppercase"
                aria-label="Get a quote for your project"
              >
                Get a Quote <ArrowRight size={14} aria-hidden="true" />
