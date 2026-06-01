@@ -47,6 +47,7 @@ Built with React 19, TypeScript, Vite 6, and Tailwind CSS 4.
 OITS Dhaka is a fully responsive, dark-mode-first corporate website for **OITS International Technology Solutions** — a global software engineering company headquartered in Dhaka, Bangladesh with offices in Singapore, Kuala Lumpur, and London.
 
 **Key Features:**
+
 - 🎨 **Dark AI / Developer aesthetic** — inspired by leading SaaS platforms (torouter.ai, web-to-mcp.com, maxun.dev)
 - 🤖 **AI Assistant** — Powered by Google Gemini API (`@google/genai`)
 - 📱 **Fully responsive** — mobile-first design across all breakpoints
@@ -60,18 +61,18 @@ OITS Dhaka is a fully responsive, dark-mode-first corporate website for **OITS I
 
 ## 🛠 Tech Stack
 
-| Category | Technology | Version |
-|---|---|---|
-| **Framework** | React | ^19.2.3 |
-| **Language** | TypeScript | ~5.8.2 |
-| **Build Tool** | Vite | ^6.2.0 |
-| **Styling** | Tailwind CSS | ^4.3.0 |
-| **Routing** | React Router DOM | ^7.11.0 |
-| **AI SDK** | Google GenAI | ^1.34.0 |
-| **Icons** | Lucide React | ^0.562.0 |
-| **Animation** | Motion (Framer) | ^12.40.0 |
-| **Charts** | Recharts | ^3.8.1 |
-| **CSS PostCSS** | Autoprefixer | ^10.5.0 |
+| Category        | Technology       | Version  |
+| --------------- | ---------------- | -------- |
+| **Framework**   | React            | ^19.2.3  |
+| **Language**    | TypeScript       | ~5.8.2   |
+| **Build Tool**  | Vite             | ^6.2.0   |
+| **Styling**     | Tailwind CSS     | ^4.3.0   |
+| **Routing**     | React Router DOM | ^7.11.0  |
+| **AI SDK**      | Google GenAI     | ^1.34.0  |
+| **Icons**       | Lucide React     | ^0.562.0 |
+| **Animation**   | Motion (Framer)  | ^12.40.0 |
+| **Charts**      | Recharts         | ^3.8.1   |
+| **CSS PostCSS** | Autoprefixer     | ^10.5.0  |
 
 ---
 
@@ -123,11 +124,11 @@ oits-web-master-latest/
 
 Ensure the following are installed on your machine before proceeding:
 
-| Tool | Minimum Version | Check Command |
-|---|---|---|
+| Tool        | Minimum Version                | Check Command    |
+| ----------- | ------------------------------ | ---------------- |
 | **Node.js** | v18.0.0+ (v20 LTS recommended) | `node --version` |
-| **npm** | v9.0.0+ | `npm --version` |
-| **Git** | Any recent version | `git --version` |
+| **npm**     | v9.0.0+                        | `npm --version`  |
+| **Git**     | Any recent version             | `git --version`  |
 
 > **Recommended:** Use [Node.js v20 LTS](https://nodejs.org/) for maximum compatibility with all dependencies.
 
@@ -138,8 +139,8 @@ Ensure the following are installed on your machine before proceeding:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/FarhanSabit-OITS/oits-web-master-latest.git
-cd oits-web-master-latest
+git clone https://github.com/oits-dhaka/OITS-website.git
+cd OITS-website
 ```
 
 ### 2. Install Dependencies
@@ -188,9 +189,9 @@ The dev server supports **Hot Module Replacement (HMR)** — changes to any file
 
 The project uses a `.env.local` file (git-ignored) for secrets. Vite exposes these to the application at build time.
 
-| Variable | Required | Description |
-|---|---|---|
-| `GEMINI_API_KEY` | ✅ Yes | Google Gemini API key for the AI Assistant widget |
+| Variable         | Required | Description                                       |
+| ---------------- | -------- | ------------------------------------------------- |
+| `GEMINI_API_KEY` | ✅ Yes   | Google Gemini API key for the AI Assistant widget |
 
 ### How to Get a Gemini API Key
 
@@ -209,12 +210,12 @@ Without a valid `GEMINI_API_KEY`, the AI Assistant chat widget will not function
 
 Run all scripts from the project root directory:
 
-| Script | Command | Description |
-|---|---|---|
-| **Dev Server** | `npm run dev` | Starts Vite dev server on `http://localhost:3000` with HMR |
-| **Type Check** | `npm run lint` | Runs `tsc --noEmit` — checks TypeScript types without building |
-| **Build** | `npm run build` | Compiles & bundles for production into the `dist/` folder |
-| **Preview** | `npm run preview` | Serves the production `dist/` build locally for pre-deploy testing |
+| Script         | Command           | Description                                                        |
+| -------------- | ----------------- | ------------------------------------------------------------------ |
+| **Dev Server** | `npm run dev`     | Starts Vite dev server on `http://localhost:3000` with HMR         |
+| **Type Check** | `npm run lint`    | Runs `tsc --noEmit` — checks TypeScript types without building     |
+| **Build**      | `npm run build`   | Compiles & bundles for production into the `dist/` folder          |
+| **Preview**    | `npm run preview` | Serves the production `dist/` build locally for pre-deploy testing |
 
 ### Typical Development Workflow
 
@@ -241,32 +242,32 @@ npm run preview
 
 The app uses **React Router v7** with a shared `Layout` wrapper (Header + Footer + AI Assistant).
 
-| Path | Component | Description |
-|---|---|---|
-| `/` | `HomeSections` | Full landing page (Hero → Marquee → Services → Process → Portfolio → About → Testimonials → Contact) |
-| `/services` | `ServicesPage` | Dedicated services listing page |
-| `/portfolio` | `PortfolioPage` | Dedicated portfolio / case studies page |
-| `/about` | `AboutPage` | Dedicated about page |
-| `/contact` | `ContactPage` | Dedicated contact form page |
-| `/workflow` | `WorkflowPage` | Development workflow / process page |
+| Path         | Component       | Description                                                                                          |
+| ------------ | --------------- | ---------------------------------------------------------------------------------------------------- |
+| `/`          | `HomeSections`  | Full landing page (Hero → Marquee → Services → Process → Portfolio → About → Testimonials → Contact) |
+| `/services`  | `ServicesPage`  | Dedicated services listing page                                                                      |
+| `/portfolio` | `PortfolioPage` | Dedicated portfolio / case studies page                                                              |
+| `/about`     | `AboutPage`     | Dedicated about page                                                                                 |
+| `/contact`   | `ContactPage`   | Dedicated contact form page                                                                          |
+| `/workflow`  | `WorkflowPage`  | Development workflow / process page                                                                  |
 
 ---
 
 ## 🧩 Key Components
 
-| Component | Purpose |
-|---|---|
-| `Header.tsx` | Sticky glassmorphic navbar with light/dark toggle and "Get a Quote" CTA |
-| `Hero.tsx` | Animated headline with gradient text, neon CTA buttons, and floating stat cards |
-| `Services.tsx` | Service cards with icon wells, hover glows, and tech category filtering |
-| `Process.tsx` | 5-step development lifecycle with animated step cards and CTA scheduling banner |
-| `Portfolio.tsx` | Filterable project grid with tech tags and case study modal |
-| `About.tsx` | Company mission, core values checklist, animated stats, and global offices grid |
-| `Testimonials.tsx` | Client testimonials with glassmorphic cards |
-| `Contact.tsx` | Full contact form with validation, info cards, and social links |
-| `Footer.tsx` | Editorial multi-column footer with newsletter subscription and compliance links |
-| `AiAssistant.tsx` | Floating Gemini-powered chat widget for visitor queries |
-| `TechDetailModal.tsx` | Detailed modal for individual tech stack entries with metrics |
+| Component             | Purpose                                                                         |
+| --------------------- | ------------------------------------------------------------------------------- |
+| `Header.tsx`          | Sticky glassmorphic navbar with light/dark toggle and "Get a Quote" CTA         |
+| `Hero.tsx`            | Animated headline with gradient text, neon CTA buttons, and floating stat cards |
+| `Services.tsx`        | Service cards with icon wells, hover glows, and tech category filtering         |
+| `Process.tsx`         | 5-step development lifecycle with animated step cards and CTA scheduling banner |
+| `Portfolio.tsx`       | Filterable project grid with tech tags and case study modal                     |
+| `About.tsx`           | Company mission, core values checklist, animated stats, and global offices grid |
+| `Testimonials.tsx`    | Client testimonials with glassmorphic cards                                     |
+| `Contact.tsx`         | Full contact form with validation, info cards, and social links                 |
+| `Footer.tsx`          | Editorial multi-column footer with newsletter subscription and compliance links |
+| `AiAssistant.tsx`     | Floating Gemini-powered chat widget for visitor queries                         |
+| `TechDetailModal.tsx` | Detailed modal for individual tech stack entries with metrics                   |
 
 ---
 
@@ -275,6 +276,7 @@ The app uses **React Router v7** with a shared `Layout` wrapper (Header + Footer
 The site supports **light** and **dark** modes managed through Tailwind's `dark:` variant.
 
 **How it works:**
+
 - On first load, the theme respects the OS preference (`prefers-color-scheme`)
 - User can toggle via the moon/sun icon in the Header
 - Choice is persisted to `localStorage` under the key `"theme"`
@@ -282,14 +284,14 @@ The site supports **light** and **dark** modes managed through Tailwind's `dark:
 
 **Dark mode design tokens (as applied):**
 
-| Token | Value | Usage |
-|---|---|---|
-| Base background | `slate-950` (`#020617`) | Section backgrounds |
-| Card background | `slate-900/50` | Glassmorphic cards |
-| Border | `slate-700/50` | Card borders |
-| Accent | `sky-400` / `sky-500` | Icons, glows, CTAs |
-| Heading gradient | `from-white to-slate-400` | Large headings |
-| Muted text | `slate-400` | Descriptions, labels |
+| Token            | Value                     | Usage                |
+| ---------------- | ------------------------- | -------------------- |
+| Base background  | `slate-950` (`#020617`)   | Section backgrounds  |
+| Card background  | `slate-900/50`            | Glassmorphic cards   |
+| Border           | `slate-700/50`            | Card borders         |
+| Accent           | `sky-400` / `sky-500`     | Icons, glows, CTAs   |
+| Heading gradient | `from-white to-slate-400` | Large headings       |
+| Muted text       | `slate-400`               | Descriptions, labels |
 
 ---
 
@@ -401,12 +403,15 @@ npm install
 ### Port 3000 already in use
 
 Change the port in `vite.config.ts`:
+
 ```ts
 server: {
   port: 3001, // Change to any free port
 }
 ```
+
 Or kill the process using the port:
+
 ```powershell
 # Windows PowerShell
 netstat -ano | findstr :3000
@@ -433,6 +438,7 @@ Ensure `localStorage` is not blocked by your browser's privacy settings. The the
 ### Blank page after `npm run build`
 
 Ensure the `base` path in `vite.config.ts` matches your deployment path. If deployed to a subdirectory (e.g., `yourdomain.com/app/`), add:
+
 ```ts
 base: '/app/',
 ```
