@@ -139,8 +139,8 @@ Ensure the following are installed on your machine before proceeding:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/FarhanSabit-OITS/oits-web-master-latest.git
-cd oits-web-master-latest
+git clone https://github.com/oits-dhaka/OITS-website.git
+cd OITS-website
 ```
 
 ### 2. Install Dependencies
